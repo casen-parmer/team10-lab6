@@ -7,6 +7,11 @@ public class Student {
         name     = n;
     }
 
+    public Student() {
+        uniqueID = -1;
+        name     = "";
+    }
+
     public void setName(String n) {
         name = n;
     }
