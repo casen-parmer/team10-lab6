@@ -39,6 +39,13 @@ public class App {
                     }
                     break;
                 case "return" :
+                    System.out.print("Book Title: ");
+                    String booke = s.nextLine();
+                    if (sys.return(booke)) {
+                        System.out.println(name + " returned " + book + ".");
+                    } else {
+                        System.out.println("Book not returned.");
+                    }
                     break;
                 default:
                     System.out.println("Unrecognized command");
