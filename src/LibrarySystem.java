@@ -12,6 +12,15 @@ public class LibrarySystem {
         students.add(new Student(101, "John King"));
     }
 
+    public boolean studentSearch(String name, int studentID) {
+        for (Student s : students) {
+            if (s.getName().equals(name) && s.getUniqueID() == studentID) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public boolean borrow(String title) {
         for (Book book : inventory) {
             if (book.getTitle().equals(title)) {

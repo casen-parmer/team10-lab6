@@ -6,7 +6,7 @@ public class App {
         Scanner s = new Scanner(System.in);
         String name = null;
         int studentID = 0;
-        while (!(sys.studentSearch(name, studentID) != null)) {
+        while (!(sys.studentSearch(name, studentID))) {
             System.out.print("Name: ");
             name = s.nextLine();
             System.out.print("Student ID: ");
@@ -30,6 +30,13 @@ public class App {
                 case "list" :
                     break;
                 case "checkout" :
+                    System.out.print("Book Title: ");
+                    String book = s.nextLine();
+                    if (sys.borrow(book)) {
+                        System.out.println(name + " borrowed " + book + ".");
+                    } else {
+                        System.out.println(book + " is not available.");
+                    }
                     break;
                 case "return" :
                     break;
