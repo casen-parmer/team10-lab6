@@ -12,20 +12,12 @@ public class LibrarySystem {
         students.add(new Student(101, "John King"));
     }
 
-    public boolean studentSearch(String name, int studentID) {
-        for (Student s : students) {
-            if (s.getName().equals(name) && s.getUniqueID() == studentID) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public boolean borrow(String title) {
+    public boolean borrow(String title, Student student) {
         for (Book book : inventory) {
             if (book.getTitle().equals(title)) {
                 if (book.isAvailable()) {
                     book.setAvailable(false);
+                    student.checkOutBook(book);
                     return true;
                 }
             }
@@ -33,14 +25,16 @@ public class LibrarySystem {
         }
     }
 
-    public void return(Book checkedBook) {
+    public boolean return(Book checkedBook, Student student) {
         String title = checkedBook.getTitle;
 
         for (Book book : inventory) {
             if (book.getTitle.equals(title)) {
                 checkedBook.setAvailable(true);
-                System.out.println(student.getName + " returned " + title + ".");
+                student.returnBook(book);
+                return true;
             }
         }
+        return false;
     } 
 }
