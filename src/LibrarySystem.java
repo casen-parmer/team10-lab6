@@ -12,18 +12,15 @@ public class LibrarySystem {
         students.add(new Student(101, "John King"));
     }
 
-    public static void borrow(Book studentBook) {
-        String title = studentBook.getTitle();
-
+    public boolean borrow(String title) {
         for (Book book : inventory) {
             if (book.getTitle().equals(title)) {
                 if (book.isAvailable()) {
-                    studentBook.setAvailable(false);
-                    System.out.println(student.getName() + " borrowed " + title + ".");
-                } else {
-                    System.out.println(title + " is not available.");
+                    book.setAvailable(false);
+                    return true;
                 }
             }
+            return false;
         }
     }
 
