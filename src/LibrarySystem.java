@@ -12,8 +12,7 @@ public class LibrarySystem {
         for (Book book : inventory) {
             if (book.getTitle().equals(title)) {
                 if (book.isAvailable()) {
-                    //change
-                    studentBook.setAvailablility(false);
+                    studentBook.setAvailable(false);
                     System.out.println(student.getName() + " borrowed " + title + ".");
 
                 } else {
