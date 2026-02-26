@@ -6,4 +6,13 @@ public class Student {
         uniqueID = uid;
         name     = n;
     }
+
+    public void setName(String n) {
+        name = n;
+    }
+
+    public void setUniqueId(int uid) {
+        uniqueID = uid;
+    }
+
 }
