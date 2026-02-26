@@ -8,11 +8,13 @@ public class Student {
     public Student(int uid, String n) {
         uniqueID = uid;
         name     = n;
+        checkedOutBooks = new ArrayList<Book>();
     }
 
     public Student() {
         uniqueID = -1;
         name     = "";
+        checkedOutBooks = new ArrayList<Book>();
     }
 
     public void setName(String n) {
