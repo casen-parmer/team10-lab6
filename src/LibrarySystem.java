@@ -18,13 +18,22 @@ public class LibrarySystem {
         for (Book book : inventory) {
             if (book.getTitle().equals(title)) {
                 if (book.isAvailable()) {
-                    //change
-                    studentBook.setAvailablility(false);
+                    studentBook.setAvailable(false);
                     System.out.println(student.getName() + " borrowed " + title + ".");
-
                 } else {
                     System.out.println(title + " is not available.");
                 }
+            }
+        }
+    }
+
+    public void return(Book checkedBook) {
+        String title = checkedBook.getTitle;
+
+        for (Book book : inventory) {
+            if (book.getTitle.equals(title)) {
+                checkedBook.setAvailable(true);
+                System.out.println(student.getName + " returned " + title + ".");
             }
         }
     } 
