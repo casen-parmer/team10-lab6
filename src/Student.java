@@ -11,8 +11,15 @@ public class Student {
         name = n;
     }
 
-    public void setUniqueId(int uid) {
+    public void setUniqueID(int uid) {
         uniqueID = uid;
     }
 
+    public int getUniqueID() {
+        return uniqueID;
+    }
+
+    public String getName() {
+        return name;
+    }
 }
